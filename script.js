@@ -18,7 +18,11 @@ function action(event) {
 }
 
 function sum(event) {
+    let t = event.target;
     
+    if (t.className != 'sum') return;
+    
+    display.innerHTML = eval(display.innerHTML);
 }
 
 function num(event) {
@@ -37,3 +41,4 @@ function num(event) {
 
 calculator.addEventListener('click', num);
 calculator.addEventListener('click', action);
+calculator.addEventListener('click', sum);
