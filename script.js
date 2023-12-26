@@ -4,7 +4,15 @@ let display = document.querySelector('.display')
 function action(event) {
     let trg = event.target;
 
-    if (trg.className != 'dia') return;
+    let dia = document.querySelectorAll('.dia');
+    let fixdia = Object.values(dia).map((elem) => elem.innerHTML);
+    let strlength = display.innerHTML.length;
+    
+    for (elem of fixdia) { 
+        if (display.innerHTML.charAt(strlength - 1) == elem) return;
+    };
+    
+    if (!trg.classList.contains('dia')) return;
 
     display.innerHTML += trg.innerHTML;
 }
