@@ -5,13 +5,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Oswald:wght@200&family=Roboto+Condensed:wght@300&family=Victor+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
     </head>
     <body>
-        <div class="calculator">
+        <div id="calc" class="calculator">
             <div class="display">0</div>
             <div class="touch__display">
-                <button class="ref grey">AC</button>
+                <button class="ref grey" onclick="display.innerHTML = 0">AC</button>
                 <button class="plus__min grey">+/-</button>
                 <button class="proc grey">%</button>
                 <button class="del dia">/</button>
@@ -27,11 +26,11 @@
                 <button class="num">2</button>
                 <button class="num">3</button>
                 <button class="plus dia">+</button>
-                <button class="num zero">0</button>
+                <button class="num zero" onclick="display.innerHTML += 0">0</button>
                 <button class="dot">.</button>
-                <button class="sum dia">=</button>
+                <button class="sum">=</button>
             </div>
         </div>
-        
+        <script src="script.js"></script>
     </body>
 </html>
