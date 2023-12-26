@@ -1,5 +1,8 @@
+/* For all page */
+
 * {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -13,32 +16,48 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Display */
+
+.display {
+    color: white;
+    font-size: 64px;
+    text-align: end;
+    padding-top: 100px;
+    padding-right: 45px;
+    border-radius: 50px;
+}
+
 .calculator {
     background-color: black;
     height: 600px;
     width: 420px;
+    border-radius: 50px;
 }
 
 
 .calculator .display {
     width: 420px;
     height: 200px;
-    background-color: grey;
+    background-color: rgb(0, 0, 0);
 }
 
 .touch__display {
     width: 420px;
     height: 400px;
 
-    background-color: bisque;
+    background-color: rgb(0, 0, 0);
 
 
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5px;
     padding: 15px;
-    justify-items: center; 
+    justify-items: center;
+    border-radius: 50px;
 }
+
+/* Buttons */
 
 button {
     display: block;
@@ -51,5 +70,27 @@ button {
     border: none;
 
     text-align: center;
+}
+
+
+.zero {
+    grid-column-start: span 2;
+    width: 160px;
+    text-align: left;
+    padding-left: 22px;
+}
+
+
+.dia {
+    background-color: orange;
+    color: white;
+}
+
+.grey {
+    background-color: rgb(179, 179, 179);
+}
+
+.num, .dot{
+    background-color: grey;
 }
 
